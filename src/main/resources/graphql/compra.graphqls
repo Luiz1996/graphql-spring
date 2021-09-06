@@ -8,10 +8,10 @@ type Compra {
 }
 
 type CompraRelatorio {
-    compraId : ID!
-    cliente: String!
-    produto: String!
-    quantidade: Int!
+    idCompra : ID!
+    nomeCliente: String!
+    descricaoProduto: String!
+    quantidadeComprada: Int!
 }
 
 input CompraInput {

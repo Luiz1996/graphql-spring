@@ -15,7 +15,6 @@ public interface CompraRepository extends JpaRepository<Compra, Long> {
     List<Compra> findAllByCliente(@Param("clienteId") Long clienteId);
 
     @Override
-//    @CacheEvict(value = "comprasByCliente", key = "#p0.id")
     <S extends Compra> S save(S s);
 
     @Query("select new com.udemy.compras.graphql.dto.CompraResumo(c.id,cli.nome,p.nome,c.quantidade) from Compra c inner join c.cliente cli inner join c.produto p")

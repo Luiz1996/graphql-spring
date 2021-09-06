@@ -39,7 +39,9 @@ public class CompraGraphQL implements GraphQLQueryResolver, GraphQLMutationResol
     }
 
     public List<CompraResumo> getComprasRelatorio() {
+
         return service.findAllComprasRelatorio();
+
     }
 
     public Compra saveCompra(CompraInput input) {
